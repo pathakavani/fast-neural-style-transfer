@@ -4,11 +4,11 @@ A real-time neural style transfer system for videos and images with both complet
 
 
 ## Technical overview
-Our Neural Style Transfer implementation leverages a feed-forward transformer network architecture for efficient real-time video processing. The core system consists of a PyTorch-based transformer network with convolutional, residual, and deconvolutional blocks that apply artistic styles to video frames.
-For complete stylization, frames undergo direct transformation with temporal consistency applied between consecutive frames to prevent flickering artifacts.
-For semantic stylization, we integrate Mask R-CNN object detection to create binary masks enabling different styles for foreground subjects and backgrounds.
-The system includes six pre-trained style models: Vincent van Gogh's "Starry Night" (starry.pth), mosaic pattern (mosaic.pth), Hokusai's "The Great Wave" (wave.pth), anime-inspired "Tokyo Ghoul" (tokyo_ghoul.pth), Francis Picabia's "Udnie" (udnie.pth), and a simplified abstract style (lazy.pth).
-Our client-server architecture uses WebSockets for low-latency communication, with a FastAPI backend processing frames and a browser-based frontend handling capture and display. Extensive performance optimizations, including frame rate control, JPEG compression, targeted resolution, and efficient GPU memory management—enable real-time processing at 40-50 FPS even on resource-constrained edge devices like the Jetson Nano, making computationally intensive neural style transfer practical in bandwidth-limited environments without cloud dependencies.
+- Our Neural Style Transfer implementation leverages a feed-forward transformer network architecture for efficient real-time video processing. The core system consists of a PyTorch-based transformer network with convolutional, residual, and deconvolutional blocks that apply artistic styles to video frames.
+- For complete stylization, frames undergo direct transformation with temporal consistency applied between consecutive frames to prevent flickering artifacts.
+- For semantic stylization, we integrate Mask R-CNN object detection to create binary masks enabling different styles for foreground subjects and backgrounds.
+- The system includes six pre-trained style models: Vincent van Gogh's "Starry Night" (starry.pth), mosaic pattern (mosaic.pth), Hokusai's "The Great Wave" (wave.pth), anime-inspired "Tokyo Ghoul" (tokyo_ghoul.pth), Francis Picabia's "Udnie" (udnie.pth), and a simplified abstract style (lazy.pth).
+- Our client-server architecture uses WebSockets for low-latency communication, with a FastAPI backend processing frames and a browser-based frontend handling capture and display. Extensive performance optimizations, including frame rate control, JPEG compression, targeted resolution, and efficient GPU memory management—enable real-time processing at 40-50 FPS even on resource-constrained edge devices like the Jetson Nano, making computationally intensive neural style transfer practical in bandwidth-limited environments without cloud dependencies.
 
 
 ## Demo for real-time video style transfer running on edge:
